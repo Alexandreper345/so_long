@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 20:02:34 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/19 19:52:41 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/20 21:27:02 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 # include "Printf/ft_printf.h"
 # include <fcntl.h>
 
-int	this_rectangular(char *line);
+int	this_rectangular(char *line, size_t len, int fd);
 
 #endif

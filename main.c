@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 19:43:25 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/19 20:50:28 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/20 21:35:10 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 	int fd;
 	size_t	len;
 	char	*line;
-
+	char	*line_backup;
 	i = 1;
 	fd = open("texto.txt", O_RDWR);
 	if (fd == -1)
@@ -27,20 +27,18 @@ int	main(void)
 		return (0);
 	}
 	line = get_next_line(fd);
+	line_backup = ft_strdup(line);
 	len = ft_strlen(line);
+	if (this_rectangular(line, len, fd))
+		return (0);
+	line = line_backup;	
 	while (line)
 	{
-		ft_printf(line);
-		//if (this_rectangular(line))
-		//	return (0);
-		free(line);
 		line = get_next_line(fd);
-		if (line != NULL && len != ft_strlen(line))
-		{
-			ft_printf("Error");
-			return (0);
-		}
+		ft_printf(line);
+		free(line);
 	}
+	
 	close(fd);
 	return (0);
 }

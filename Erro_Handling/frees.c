@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   long.h                                             :+:      :+:    :+:   */
+/*   frees.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/17 20:02:34 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/24 21:55:06 by alda-sil         ###   ########.fr       */
+/*   Created: 2025/02/24 21:42:04 by alda-sil          #+#    #+#             */
+/*   Updated: 2025/02/24 21:57:08 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LONG_H
-# define LONG_H
-# include "Get_next_line/get_next_line.h"
-# include "Printf/ft_printf.h"
-# include <fcntl.h>
+#include "../long.h"
 
-int		this_rectangular(char *line, size_t len);
-int		size_height(char *map_path);
-int		size_width(char	*map_path);
-void	frees(char **matrix, int height , int Width);
-
-#endif
+void	frees(char **matrix, int height , int Width)
+{
+	int j;
+	
+	j = 0;
+	while (j <  height + 1)
+	{
+		free(matrix[j]);
+		j++;
+	}
+	free(matrix);
+}

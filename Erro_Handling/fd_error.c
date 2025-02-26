@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   fd_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 14:51:59 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/25 20:34:15 by alda-sil         ###   ########.fr       */
+/*   Created: 2025/02/25 17:26:11 by alda-sil          #+#    #+#             */
+/*   Updated: 2025/02/25 17:29:35 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 50
-# endif
-# include <stdlib.h>
-# include <unistd.h>
+#include "../long.h"
 
-char	*gnl_strjoin(char *s1, char *s2);
-size_t	ft_strlen(const char *str);
-char	*ft_strchr(const char *s, int c);
-char	*get_next_line(int fd);
-char	*ft_strdup(char *s);
-
-#endif
+int	fd_error(int fd)
+{
+	if (fd == -1)
+	{
+		ft_printf("Error\n");
+		return (1);
+	}
+	return (0);
+}

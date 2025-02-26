@@ -6,12 +6,12 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:51:24 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/24 16:42:50 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/25 20:33:45 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdio.h>
+#include "../long.h"
 
 char	*save_backup(char *c)
 {
@@ -79,6 +79,7 @@ char	*get_next_line(int fd)
 		backup = NULL;
 		return (NULL);
 	}
+
 	backup = save_backup(current_line);
 	return (current_line);
 }

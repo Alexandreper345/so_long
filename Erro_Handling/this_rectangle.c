@@ -6,7 +6,7 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 19:22:51 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/24 19:55:33 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/25 20:39:00 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	this_rectangular(char *line, size_t len)
 	if (len != temp)
 	{
 		ft_printf("Error\n");
-		free_both(&line);
+		//free_both(&line);
 		return (1);
 	}
 	return (0);

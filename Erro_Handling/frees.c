@@ -6,13 +6,13 @@
 /*   By: alda-sil <alda-sil@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 21:42:04 by alda-sil          #+#    #+#             */
-/*   Updated: 2025/02/24 21:57:08 by alda-sil         ###   ########.fr       */
+/*   Updated: 2025/02/25 18:21:13 by alda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../long.h"
 
-void	frees(char **matrix, int height , int Width)
+void	frees(char **matrix, int height)
 {
 	int j;
 	
